@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전국공무원노동조합 양구군지부 조합원 설문조사</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="양구군지부 공직 사회 소통을 위한 설문조사입니다.">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="survey-container">
+        <header class="survey-header" id="surveyHeader">
+            <div class="logo-placeholder">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+            </div>
+            <h1>공직 사회 소통을 위한 설문</h1>
+            <p>조합원 여러분의 소중한 의견을 듣습니다.</p>
+        </header>
+
+        <form id="surveyForm" class="survey-form">
+            
+            <!-- 진행률 표시 바 -->
+            <div class="progress-wrapper">
+                <div class="progress-info">
+                    <span class="step-text">진행 상황</span>
+                    <span class="step-count" id="stepIndicator">1 / 12</span>
+                </div>
+                <div class="progress-bg">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+
+            <!-- 1단계: 인증 코드 -->
+            <div class="form-step active" data-step="1">
+                <h2 class="step-title">본인 인증</h2>
+                <div class="form-group floating-label-group">
+                    <label for="participationCode" class="floating-label">고유 참여 코드를 입력해 주세요 *</label>
+                    <input type="text" id="participationCode" name="participationCode" placeholder="예: YG-A7K3" autocomplete="off" class="form-control uppercase-input">
+                    <span class="validation-message" id="codeValidationMessage">유효한 코드를 입력해주세요. (최소 5자리)</span>
+                </div>
+                <div class="form-actions right">
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 2단계: 설문 1 -->
+            <div class="form-step" data-step="2">
+                <h2 class="step-title">설문 (1/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q1-label">1. 조직의 발전을 위해 개인의 희생은 감수해야 한다고 생각하십니까? *</label>
+                    <div class="radio-group" aria-labelledby="q1-label">
+                        <label class="radio-label"><input type="radio" name="q1" value="매우 그렇지 않다"><span class="radio-custom"></span> 매우 그렇지 않다</label>
+                        <label class="radio-label"><input type="radio" name="q1" value="그렇지 않다"><span class="radio-custom"></span> 그렇지 않다</label>
+                        <label class="radio-label"><input type="radio" name="q1" value="보통이다"><span class="radio-custom"></span> 보통이다</label>
+                        <label class="radio-label"><input type="radio" name="q1" value="그렇다"><span class="radio-custom"></span> 그렇다</label>
+                        <label class="radio-label"><input type="radio" name="q1" value="매우 그렇다"><span class="radio-custom"></span> 매우 그렇다</label>
+                    </div>
+                    <span class="validation-message" id="v-q1">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 3단계: 설문 2 -->
+            <div class="form-step" data-step="3">
+                <h2 class="step-title">설문 (2/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q2-label">2. 이직을 고민한 적이 있습니까? *</label>
+                    <div class="radio-group" aria-labelledby="q2-label">
+                        <label class="radio-label"><input type="radio" name="q2" value="있다"><span class="radio-custom"></span> 있다</label>
+                        <label class="radio-label"><input type="radio" name="q2" value="없다"><span class="radio-custom"></span> 없다</label>
+                    </div>
+                    <span class="validation-message" id="v-q2">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 4단계: 설문 3 -->
+            <div class="form-step" data-step="4">
+                <h2 class="step-title">설문 (3/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q3-label">3. 이직을 고민한 적이 있다면, 그 이유는 무엇입니까? *</label>
+                    <div class="radio-group" aria-labelledby="q3-label">
+                        <label class="radio-label"><input type="radio" name="q3" value="조직문화에 대한 회의감"><span class="radio-custom"></span> 조직문화에 대한 회의감</label>
+                        <label class="radio-label"><input type="radio" name="q3" value="일하는 방식에 대한 회의감"><span class="radio-custom"></span> 일하는 방식에 대한 회의감</label>
+                        <label class="radio-label"><input type="radio" name="q3" value="지나치게 많은 업무량"><span class="radio-custom"></span> 지나치게 많은 업무량</label>
+                        <label class="radio-label"><input type="radio" name="q3" value="다른 분야에 대한 호기심"><span class="radio-custom"></span> 다른 분야에 대한 호기심</label>
+                    </div>
+                    <span class="validation-message" id="v-q3">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 5단계: 설문 4 -->
+            <div class="form-step" data-step="5">
+                <h2 class="step-title">설문 (4/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q4-label">
+                        4. 우리 회사에 꼰대*가 있다고 생각하십니까? *
+                        <div class="sub-label">*자신의 구태의연한 사고방식을 타인에게 강요하는 직장 상사 또는 연장자를 가리키는 말 (출처: 위키백과)</div>
+                    </label>
+                    <div class="radio-group" aria-labelledby="q4-label">
+                        <label class="radio-label"><input type="radio" name="q4" value="있다"><span class="radio-custom"></span> 있다</label>
+                        <label class="radio-label"><input type="radio" name="q4" value="없다"><span class="radio-custom"></span> 없다</label>
+                    </div>
+                    <span class="validation-message" id="v-q4">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 6단계: 설문 5 -->
+            <div class="form-step" data-step="6">
+                <h2 class="step-title">설문 (5/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q5-label">5. 회사에서 가장 흔하게 볼 수 있는 꼰대의 유형은 무엇입니까? *</label>
+                    <div class="radio-group" aria-labelledby="q5-label">
+                        <label class="radio-label"><input type="radio" name="q5" value="사감 선생형(옷차림, 화장 등 상대방의 외모에 시시콜콜 간섭)"><span class="radio-custom"></span> 사감 선생형 (외모 간섭)</label>
+                        <label class="radio-label"><input type="radio" name="q5" value="갑질 오너형(본업과 무관한 개인적 심부름을 시키는 스타일)"><span class="radio-custom"></span> 갑질 오너형 (개인적 심부름)</label>
+                        <label class="radio-label"><input type="radio" name="q5" value="동네 반장형(호구 조사하듯 사생활을 캐물음)"><span class="radio-custom"></span> 동네 반장형 (사생활 캐물음)</label>
+                        <label class="radio-label"><input type="radio" name="q5" value="군대 조교형(‘까라면 까’식의 상명하복을 강요)"><span class="radio-custom"></span> 군대 조교형 (상명하복 강요)</label>
+                        <label class="radio-label"><input type="radio" name="q5" value="라떼는 말이야형(과거 경험만 중시하여, 사회 변화나 세대별 차이를 무시)"><span class="radio-custom"></span> 라떼는 말이야형 (과거 경험 중시)</label>
+                    </div>
+                    <span class="validation-message" id="v-q5">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 7단계: 설문 6 -->
+            <div class="form-step" data-step="7">
+                <h2 class="step-title">설문 (6/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q6-label">6. 그중 가장 싫다고 생각하는 꼰대 유형은 무엇입니까? *</label>
+                    <div class="radio-group" aria-labelledby="q6-label">
+                        <label class="radio-label"><input type="radio" name="q6" value="갑질 오너형(본업과 무관한 개인적 심부름을 시키는 스타일)"><span class="radio-custom"></span> 갑질 오너형 (개인적 심부름)</label>
+                        <label class="radio-label"><input type="radio" name="q6" value="군대 조교형(‘까라면 까’식의 상명하복을 강요)"><span class="radio-custom"></span> 군대 조교형 (상명하복 강요)</label>
+                        <label class="radio-label"><input type="radio" name="q6" value="라떼는 말이야형(과거 경험만 중시하여, 사회 변화나 세대별 차이를 무시)"><span class="radio-custom"></span> 라떼는 말이야형 (과거 경험 중시)</label>
+                        <label class="radio-label"><input type="radio" name="q6" value="사감 선생형(옷차림, 화장 등 상대방의 외모에 시시콜콜 간섭)"><span class="radio-custom"></span> 사감 선생형 (외모 간섭)</label>
+                        <label class="radio-label"><input type="radio" name="q6" value="동네 반장형(호구 조사하듯 사생활을 캐물음)"><span class="radio-custom"></span> 동네 반장형 (사생활 캐물음)</label>
+                    </div>
+                    <span class="validation-message" id="v-q6">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 8단계: 설문 7 -->
+            <div class="form-step" data-step="8">
+                <h2 class="step-title">설문 (7/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q7-label">7. 꼰대 상사에 대처하는 노하우가 있다면 무엇입니까? *</label>
+                    <div class="radio-group" aria-labelledby="q7-label">
+                        <label class="radio-label"><input type="radio" name="q7" value="한 귀로 듣고 한 귀로 흘린다"><span class="radio-custom"></span> 한 귀로 듣고 한 귀로 흘린다</label>
+                        <label class="radio-label"><input type="radio" name="q7" value="책잡힐 일 없도록 공손히 대한다"><span class="radio-custom"></span> 책잡힐 일 없도록 공손히 대한다</label>
+                        <label class="radio-label"><input type="radio" name="q7" value="책잡힐 일 없도록 업무적으로 완벽한 태도를 보인다"><span class="radio-custom"></span> 책잡힐 일 없도록 업무적으로 완벽한 태도를 보인다</label>
+                        <label class="radio-label"><input type="radio" name="q7" value="적당한 거리를 유지한다"><span class="radio-custom"></span> 적당한 거리를 유지한다</label>
+                        <label class="radio-label"><input type="radio" name="q7" value="일적으로만 부딪히고, 개인적인 친분을 쌓지 않는다"><span class="radio-custom"></span> 일적으로만 부딪히고, 개인적인 친분을 쌓지 않는다</label>
+                    </div>
+                    <span class="validation-message" id="v-q7">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 9단계: 설문 8 -->
+            <div class="form-step" data-step="9">
+                <h2 class="step-title">설문 (8/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q8-label">8. 스스로를 꼰대라고 생각하십니까? *</label>
+                    <div class="radio-group" aria-labelledby="q8-label">
+                        <label class="radio-label"><input type="radio" name="q8" value="전혀 그렇지 않다"><span class="radio-custom"></span> 전혀 그렇지 않다</label>
+                        <label class="radio-label"><input type="radio" name="q8" value="그렇지 않다"><span class="radio-custom"></span> 그렇지 않다</label>
+                        <label class="radio-label"><input type="radio" name="q8" value="보통이다"><span class="radio-custom"></span> 보통이다</label>
+                        <label class="radio-label"><input type="radio" name="q8" value="그렇다"><span class="radio-custom"></span> 그렇다</label>
+                        <label class="radio-label"><input type="radio" name="q8" value="매우 그렇다"><span class="radio-custom"></span> 매우 그렇다</label>
+                    </div>
+                    <span class="validation-message" id="v-q8">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 10단계: 설문 9 -->
+            <div class="form-step" data-step="10">
+                <h2 class="step-title">설문 (9/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q9-label">9. 꼰대가 되지 않기 위해 노력하는 것이 있다면, 무엇입니까? *</label>
+                    <div class="radio-group" aria-labelledby="q9-label">
+                        <label class="radio-label"><input type="radio" name="q9" value="상대방의 사생활에 참견하지 않고 프라이버시를 존중한다"><span class="radio-custom"></span> 사생활에 참견하지 않고 프라이버시 존중</label>
+                        <label class="radio-label"><input type="radio" name="q9" value="내 가치관과 다를 수도 있다고 생각하고, 강요하지 않는다"><span class="radio-custom"></span> 가치관 차이 인정 및 강요하지 않음</label>
+                        <label class="radio-label"><input type="radio" name="q9" value="되도록 말수를 줄이고, 상대방의 이야기를 경청하려 한다"><span class="radio-custom"></span> 말수를 줄이고 경청함</label>
+                        <label class="radio-label"><input type="radio" name="q9" value="반말이나 화를 내는 등 권위적인 언행을 삼가려 한다"><span class="radio-custom"></span> 권위적인 언행 삼가</label>
+                        <label class="radio-label"><input type="radio" name="q9" value="조언을 할 때는 감정을 최소화하고, 실무 위주의 조언만 하려 한다"><span class="radio-custom"></span> 감정 배제, 실무 위주의 조언</label>
+                        <label class="radio-label"><input type="radio" name="q9" value="업무 외적인 시간에 하는 회식 등 모임을 최소화하려 한다"><span class="radio-custom"></span> 업무 외 모임(회식 등) 최소화</label>
+                        <label class="radio-label"><input type="radio" name="q9" value="별도의 노력을 하지 않는다"><span class="radio-custom"></span> 별도의 노력을 하지 않는다</label>
+                    </div>
+                    <span class="validation-message" id="v-q9">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 11단계: 설문 10 -->
+            <div class="form-step" data-step="11">
+                <h2 class="step-title">설문 (10/11)</h2>
+                <div class="form-group">
+                    <label class="question-label" id="q10-label">10. 사회 초년생일 때 함께 일하고 싶지 않았던 꼰대가 있었다면, 어떤 유형입니까? *</label>
+                    <div class="radio-group" aria-labelledby="q10-label">
+                        <label class="radio-label"><input type="radio" name="q10" value="동네 반장형(호구 조사하듯 사생활을 캐물음)"><span class="radio-custom"></span> 동네 반장형 (사생활 캐물음)</label>
+                        <label class="radio-label"><input type="radio" name="q10" value="군대 조교형(‘까라면 까’식의 상명하복을 강요)"><span class="radio-custom"></span> 군대 조교형 (상명하복 강요)</label>
+                        <label class="radio-label"><input type="radio" name="q10" value="라떼는 말이야형(과거 경험만 중시하여, 사회 변화나 세대별 차이를 무시)"><span class="radio-custom"></span> 라떼는 말이야형 (과거 경험 중시)</label>
+                        <label class="radio-label"><input type="radio" name="q10" value="사감 선생형(옷차림, 화장 등 상대방의 외모에 시시콜콜 간섭)"><span class="radio-custom"></span> 사감 선생형 (외모 간섭)</label>
+                        <label class="radio-label"><input type="radio" name="q10" value="갑질 오너형(본업과 무관한 개인적 심부름을 시키는 스타일)"><span class="radio-custom"></span> 갑질 오너형 (개인적 심부름)</label>
+                    </div>
+                    <span class="validation-message" id="v-q10">항목을 선택해주세요.</span>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="button" class="btn-nav btn-next">다음으로 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </div>
+
+            <!-- 12단계: 설문 11 -->
+            <div class="form-step" data-step="12">
+                <h2 class="step-title">설문 (11/11)</h2>
+                <div class="form-group">
+                    <label class="question-label mb-4">11. 귀하가 생각하는 양구군 베스트(참리더)・워스트 간부 공무원(6급이상)을 선정해 주세요. <br><span style="font-weight: 400; color: #64748b; font-size: 0.9rem;">(최대 3명까지 선정, 선택사항)</span></label>
+                    
+                    <div class="leader-section">
+                        <div class="leader-title">👍 함께 일하고 싶은(참리더) 공무원 (6급이상)</div>
+                        <input type="text" name="best_leader_1" class="form-control mb-2" placeholder="1순위 (이름 또는 직책)">
+                        <input type="text" name="best_leader_2" class="form-control mb-2" placeholder="2순위 (이름 또는 직책)">
+                        <input type="text" name="best_leader_3" class="form-control" placeholder="3순위 (이름 또는 직책)">
+                    </div>
+
+                    <div class="leader-section mt-4">
+                        <div class="leader-title">👎 함께 일하기 싫은(워스트) 공무원 (6급이상)</div>
+                        <input type="text" name="worst_leader_1" class="form-control mb-2" placeholder="1순위 (이름 또는 직책)">
+                        <input type="text" name="worst_leader_2" class="form-control mb-2" placeholder="2순위 (이름 또는 직책)">
+                        <input type="text" name="worst_leader_3" class="form-control" placeholder="3순위 (이름 또는 직책)">
+                    </div>
+                </div>
+                <div class="form-actions between">
+                    <button type="button" class="btn-nav btn-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 이전으로</button>
+                    <button type="submit" id="submitBtn" class="submit-btn final-submit">
+                        <span class="btn-text">설문 제출하기</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div id="successMessage" class="success-message hidden">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h2>제출이 완료되었습니다!</h2>
+            <p>소중한 의견 감사드립니다.<br>양구군지부 발전을 위해 노력하겠습니다.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
